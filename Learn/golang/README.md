@@ -10,5 +10,5 @@ Quick Steps to install go on Mac OS X
 
 ## Resources
 
-[Go Quick Tour and Hands On](https://tour.golang.org/welcome/1)
-[Things To Keep in mind](http://devs.cloudimmunity.com/gotchas-and-common-mistakes-in-go-golang/)
+1. [Go Quick Tour and Hands On](https://tour.golang.org/welcome/1)
+2. [Things To Keep in mind](http://devs.cloudimmunity.com/gotchas-and-common-mistakes-in-go-golang/)

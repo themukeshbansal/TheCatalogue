@@ -13,18 +13,6 @@ public class StockAnalyzer {
         SparkSession sparkSession = getSparkSession();
 //        JavaRDD<String> stocksRDD = sparkContext.textFile(getResourcePath("stocks.csv"));
         /**
-         * Load stocks.csv as stocks dataframe with scheme inferencing enabled. Cache the dataframe.
-         * What are the data type for each column?
-         * Cast the date field of stocks dataframe as date type
-         * What is the largest value in the date column. You should get 2016-08-15.
-         * Register the stocks dataframe as stocks temporary view.
-         * Create a new dataframe, stocks_last10 with 10 records for each stock. Select date, symbol and adjclose columns. You can use SQL statement and SQL window operation. [Hint: if you are not familiar with window operation in SQL, please refer this - https://databricks.com/blog/2015/07/15/introducing-window-functions-in-spark-sql.html]
-         * Create a new dataframe stocks_pivot, by pivoting the stocks_last10 dataframe. For each stock, we want to find daily pct change for last 10 days.
-         * Expected Output : Symbol , diff1, diff2, diff3, ... diff10
-         * diff1 : (adjclose of current date - adjclose of previous date)
-         * Find difference between adjclose for each pair of consecutive days
-         */
-        /**
          * Loading stocks.csv file as dataframe with schema inferencing enabled
          */
         Dataset<Row> stocksDataframe = sparkSession
@@ -32,6 +20,7 @@ public class StockAnalyzer {
                 .option("header", true)
                 .option("inferSchema", true)
                 .csv("input_output_folder/inputs/stocks.csv");
+        stocksDataframe.show(10,false);
         /**
          * Caching the data frame
          */
@@ -40,8 +29,32 @@ public class StockAnalyzer {
          * Printing Data Types for each column
          */
         stocksDataframe.printSchema();
-        stocksDataframe.show(10,false);
+        /**
+         * Casting the date field stocksDataframe as date type.
+         */
+        /**
+         * Printing Largest Value in the date column. Logging Error if not 2016-08-15
+         */
+        /**
+         * Registering stocksDataframe as temporary view
+         */
+        /**
+         * Creating a new Dataframe stocks_last10 with 10 records for each stock.
+         * Select date, symbol and adhclose columns
+         * Optional : To use SQL statement and SQL window operation.
+         * Window operation Reference : https://databricks.com/blog/2015/07/15/introducing-window-functions-in-spark-sql.html
+         */
 
+        /**
+         * Create a new dataframe stocks_pivot, by pivoting the stocks_last10 dataframe.
+         * For each stock, we want to find daily pct change for last 10 days.
+         */
+
+        /**
+         * Find difference between adjclose for each pair of consecutive days
+         * Expected Output : Symbol , diff1, diff2, diff3, ... diff10
+         * diff1 : (adjclose of current date - adjclose of previous date)
+         */
     }
 
     private static JavaSparkContext getSparkContext(){

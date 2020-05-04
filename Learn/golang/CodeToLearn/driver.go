@@ -3,10 +3,7 @@
 // fancy, this tends to be package main.
 package main
 
-import (
-	"chapterone"
-)
-
 func main() {
-	chapterone.
+
+
 }

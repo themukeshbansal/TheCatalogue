@@ -1,3 +1,10 @@
+An interactive application in develop which will take input from the use or wait for 3 seconds  to teach you about 
+basic datatypes and variable concepts...
+like opening up a webPage for viewing the code..a text to audio tool, which repearts whatever is being printed on console or gets a description of a tutorial and runs it.
+
+
+[Using the tour](https://tour.golang.org/list)
+
 Advanced
 Working with websockets and socket.IO in GO
 Go Protocol Buffer

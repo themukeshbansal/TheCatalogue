@@ -12,3 +12,5 @@ Exporting variables and functions :
 
 Functions
 Shortening Arguments of the same type
+
+https://github.com/TutorialEdge/Go/blob/master/README.md

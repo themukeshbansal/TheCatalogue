@@ -1,5 +1,17 @@
 # All of Git
 
+## Quick Use Case Scenarios
+
+### Bring a local folder to remote git repo
+
+```git
+git init
+git add .
+git commit -m "Fist commit"
+git remote add origin <remote repository URL>
+git remote -v
+```
+
 ## TroubleShooting
 
 1. Cannot rewrite branches: You have unstaged changes

@@ -101,5 +101,5 @@ public class MainEntry {
  *
  * Scraping the data and storing a unique reference of each record.
  * Using those to download and mark true for downloaded content.
- * 
+ *
  */
